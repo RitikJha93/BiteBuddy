@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:bitebuddy/features/authentication/models/address_model.dart';
 import 'package:bitebuddy/features/shop/models/cart/cart_model.dart';
+import 'package:bitebuddy/utils/constants/colors.dart';
 import 'package:bitebuddy/utils/helpers/helper_function.dart';
 import 'package:bitebuddy/utils/localstorage/local_storage.dart';
 import 'package:bitebuddy/utils/localstorage/storage_keys.dart';
@@ -87,9 +88,11 @@ class CartController extends GetxController {
 
       Get.offAndToNamed(Routes.orderSummary);
 
-      HelperFunctions.showSnackbar("Shpping Details added Succssfully");
+      HelperFunctions.showSnackbar(
+          "Shpping Details added Succssfully", TColors.successColor);
     } catch (e) {
-      HelperFunctions.showSnackbar("Something went wrong, please try again!");
+      HelperFunctions.showSnackbar(
+          "Something went wrong, please try again!", TColors.errorColor);
       print(e.toString());
     }
   }
@@ -139,7 +142,8 @@ class CartController extends GetxController {
     });
 
     if (type == "add") {
-      HelperFunctions.showSnackbar("${cartData.length} item added to cart");
+      HelperFunctions.showSnackbar(
+          "${cartData.length} item added to cart", TColors.successColor);
     }
   }
 

@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      
       getPages: AppRouter.pages,
       home: Scaffold(
         body: Container(

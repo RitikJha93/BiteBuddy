@@ -1,6 +1,5 @@
 import 'package:bitebuddy/common/styles/text_style.dart';
 import 'package:bitebuddy/features/authentication/models/address_model.dart';
-import 'package:bitebuddy/features/shop/controllers/cart/cart_controller.dart';
 import 'package:bitebuddy/features/shop/controllers/orders/order_controller.dart';
 import 'package:bitebuddy/utils/constants/colors.dart';
 import 'package:bitebuddy/utils/constants/sizes.dart';

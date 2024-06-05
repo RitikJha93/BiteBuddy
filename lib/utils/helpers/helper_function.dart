@@ -12,9 +12,9 @@ class HelperFunctions {
     return null;
   }
 
-  static void showSnackbar(String message) {
+  static void showSnackbar(String message, Color color) {
     ScaffoldMessenger.of(Get.context!).showSnackBar(SnackBar(
-        backgroundColor: TColors.primaryColor,
+        backgroundColor: color,
         content: Text(
           message,
           style: CommonTextStyles()

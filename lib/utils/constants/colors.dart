@@ -19,5 +19,8 @@ class TColors {
 
   //border colors
   static const Color inputBorderCoor = Color(0xffB9B4C7);
+
   //error and validation colors
+  static const Color successColor = Color(0xff0A6847);
+  static const Color errorColor = Color(0xffD04848);
 }

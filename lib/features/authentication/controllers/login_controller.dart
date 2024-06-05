@@ -1,5 +1,6 @@
 import 'package:bitebuddy/features/shop/screens/navigation_menu.dart';
 import 'package:bitebuddy/features/shop/screens/home/home_screen.dart';
+import 'package:bitebuddy/utils/constants/colors.dart';
 import 'package:bitebuddy/utils/helpers/helper_function.dart';
 import 'package:bitebuddy/utils/localstorage/local_storage.dart';
 import 'package:bitebuddy/utils/localstorage/storage_keys.dart';
@@ -31,7 +32,7 @@ class LoginController extends GetxController {
       if (data.user != null) {
         StorageService.storage
             .write(StorageKeys.userSession, data.session!.toJson());
-        HelperFunctions.showSnackbar("Logged in SuccessFully");
+        HelperFunctions.showSnackbar("Logged in SuccessFully",TColors.successColor);
         // Get.offAll(() => const BottomNavigationMenu());
         Get.offAllNamed(Routes.home);
       }
@@ -39,7 +40,7 @@ class LoginController extends GetxController {
     } on AuthException catch (e) {
       isLoading.value = false;
 
-      HelperFunctions.showSnackbar(e.message);
+      HelperFunctions.showSnackbar(e.message,TColors.errorColor);
     }
   }
 }
